@@ -1,0 +1,157 @@
+<html>
+    <head>
+        
+        <style>
+
+        </style>
+    </head>
+<body>
+    <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; color: indigo;">Shapes</h1>
+<h1>Circle</h1>
+<canvas id ="Circle" width="300" height="300">
+    
+</canvas>
+
+<h1>Rectangle</h1>
+<canvas id ="Rectangle" width="300" height="300"></canvas>
+
+<h1>Square</h1>
+<canvas id ="square" width="300" height="300"></canvas>
+
+<h1>Triangle</h1>
+<canvas id ="triangle" width="300" height="300"></canvas>
+
+<h1>Right Triangle</h1>
+<canvas id ="right triangle" width="300" height="300"></canvas>
+
+<h1>Parallelogram</h1>
+<canvas id ="parallelogram" width="500" height="300"></canvas>
+
+<h1>Ellipse</h1>
+
+<svg height="250" width="250">
+    <ellipse cx="100" cy="70" rx="85" ry="55" style="fill: crimson; border:black" />
+</svg>
+
+<h1>Star</h1>
+<br>
+<svg id = "svgelem" width = "300" height = "300">
+    <polygon points="100,10 40,180 190,60 10,60 160,180" fill="brown"/>
+</svg>
+
+
+ <h1>Cyclinder</h1>
+    <svg height="500" width="500">
+    <ellipse cx="200" cy="300" rx="90" ry="50" stroke="black" stroke-width="1" fill="green" />
+    <polygon points="110,80 110,300 290,300 290,80" fill="green"/>
+    <ellipse cx="200" cy="80" rx="90" ry="50" stroke="black" stroke-width="1" fill="red" />
+</svg>
+
+<h1>Rectangular Prism</h1>
+<svg height="400" width="400">
+    <polygon points="0,0 0,200 50,250 50,50" stroke="black" stroke-width="1" fill="grey"  />
+    <polygon points="0,0 50,50 350,50 300,0" stroke="black" stroke-width="1" fill="grey"  />
+    <polygon points="50,50 50,250 350,250 350,50" stroke="black" stroke-width="1" fill="pink"  />
+</svg>
+
+
+
+
+<script>
+    //circle
+    var cir = document.getElementById('Circle').getContext('2d');
+    cir.fillStyle = "yellow";
+
+    cir.arc(150,150,100,0,2 *Math.PI);
+    cir.fill();
+
+    //square
+    var sq = document.getElementById('square').getContext('2d');
+    sq.fillStyle = "red";
+    sq.rect(50,50,200,200);
+    sq.fill();
+
+     // rectangle
+    var rc = document.getElementById('Rectangle').getContext('2d');
+    rc.fillStyle = "blue";
+    rc.rect(50,100,200,100);
+    rc.fill();
+
+    //triangle
+    var tri = document.getElementById('triangle').getContext('2d');
+    tri.fillStyle = "pink"
+    tri.beginPath();
+    tri.moveTo(150,150);
+    tri.lineTo(50,250);
+    tri.lineTo(250,250);
+    tri.fill();
+
+    //righttriangle
+    var rig = document.getElementById('right triangle').getContext('2d');
+
+    rig.beginPath();
+    rig.moveTo(150,150);
+    rig.lineTo(30,150);
+    rig.lineTo(30,45);
+    rig.fill();
+
+    //parallelogram
+    var para = document.getElementById('parallelogram').getContext('2d');
+    var fill ="lightblue";
+    var border = "black";
+    para.fillStyle = "purple"
+
+    para.translate(50,50);
+    para.beginPath();
+    para.moveTo(157.9,145.0);
+    para.lineTo(3.0,145.0);
+    para.lineTo(81.6,3.0);
+    para.lineTo(235.3,3.0);
+    para.lineTo(157.9,145.0);
+    para.fill();
+    para.closepath();
+    para.fillStyle = "rgb(14,98,86)";
+    para.fill()
+    para.lineWidth = 4.0;
+    para.lineCap="round";
+    parajoin="round";
+    para.stroke();
+
+
+    //ellipse
+    var ell = document.getElementById('Ellipse').getContext('2d');
+    ell.beginPath();
+    ell.ellipse(100, 100, 50, 75, Math.PI / 4, 0, 2 * Math.PI);
+    ell.stroke();
+    ell.beginPath();
+    ell.setLineDash([5, 5]);
+    ell.moveTo(0, 200);
+    ell.lineTo(200, 0);
+    ell.stroke();
+
+    //star
+    var str = document.getElementById('Star').getContext('2d');
+     str.fillStyle = "red";
+     str.beginPath(); 
+     str.moveTo(50,50);
+     str.lineTo(120,150);
+     str.lineTo(0,180); 
+     str.lineTo(120,210);
+     str.lineTo(50,310);  
+     str.lineTo(160,250);
+     str.lineTo(190,370);
+     str.lineTo(220,250);
+     str.lineTo(330,310);
+     str.lineTo(260,210);
+     str.lineTo(380,180);
+     str.closePath();
+     str.stroke();
+
+
+
+
+</script>
+
+
+</body>
+</html>
