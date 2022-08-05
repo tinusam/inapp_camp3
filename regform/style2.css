@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box; 
+    
+}
+
+
+body{
+    background-color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+
+}
+
+.container{
+   
+    border-radius: 15px;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.3);
+    width:375px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    height:fit-content;
+    margin-top: -30px ;
+    margin-left: -200px;
+}
+
+
+h2{
+    text-align: center;
+    margin:0 0 20px;
+    color:white
+  
+}
+.form{
+    padding: 50px 50px;
+}
+
+.form-control{
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control label{
+    color:rgb(253, 251, 251);
+    display: block;
+    margin-bottom:5px;
+}
+
+.form-control input{
+    border:2px solid #b7b4b4;
+    border-radius: 5px;
+    display: block;
+    width:100%;
+    padding: 10px;
+    font-size:16px;
+}
+
+.form-control.error input{
+    border-color: #1e1919;
+}
+
+.form-control small{
+    color: #e74c3c;
+    position: absolute;
+    bottom: 5;
+    visibility: hidden;
+    
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+.form button{
+    cursor: pointer;
+    background-color: white;
+    border-radius:4px;
+    color:white;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    color:black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
