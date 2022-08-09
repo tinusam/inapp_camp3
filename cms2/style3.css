@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box; 
+    
+}
+
+
+body{
+    background-color:rgb(20, 6, 74);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   
+}
+
+.container{
+   
+    border-radius: 15px;
+    box-shadow: 0 20px 20px white(0,0,0,0.3);
+    width:375px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    height:fit-content;
+    margin-top: -30px ;
+    margin-left: -200px;
+}
+
+
+h2{
+    text-align: center;
+    margin:0 0 20px;
+    color:white
+  
+}
+.log_in{
+    padding: 200px 10px;
+}
+
+.log_in-control{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  position: relative;
+}
+
+.log_in-control label{
+    color:white;
+    display: block;
+    margin-bottom:5px;
+}
+
+.log_in-control input{
+    border:2px solid #000000;
+    border-radius: 5px;
+    display: block;
+    width:100%;
+    padding: 10px;
+    font-size:16px;
+}
+
+
+
+.log_in button{
+    cursor: pointer;
+    background-color: white;
+    border-radius:4px;
+    color:white;
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    color:black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#navigation {
+    position: absolute;
+    width: 200px;
+    margin-top: 60px;
+    margin-left: 50px;
+}
+

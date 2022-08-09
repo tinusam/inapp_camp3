@@ -1,0 +1,18 @@
+body{
+    background-color:rgb(5, 5, 53)
+    padding: 50px;
+}
+
+.log_in{
+    cursor: pointer;
+  
+    border-radius:4px;
+    color:rgb(201, 103, 103);
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+    color:black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
