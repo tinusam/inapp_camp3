@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bundle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+            <span class="mdc-top-app-bar__title">Page title</span>
+          </section>
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite">favorite</button>
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
+          </section>
+        </div>
+      </header>
+      <main class="mdc-top-app-bar--fixed-adjust">
+        App content
+      </main>
+
+      <aside class="mdc-drawer mdc-drawer--modal">
+        <div class="mdc-drawer__content">
+          <nav class="mdc-list">
+            <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" tabindex="0">
+              <span class="mdc-list-item__ripple"></span>
+              <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+              <span class="mdc-list-item__text">Inbox</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+              <span class="mdc-list-item__ripple"></span>
+              <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+              <span class="mdc-list-item__text">Outgoing</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+              <span class="mdc-list-item__ripple"></span>
+              <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+              <span class="mdc-list-item__text">Drafts</span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+    
+      <div class="mdc-drawer-scrim"></div>
+      <div>Main Content</div>
+
+
+
+    Hello World
+    <div class="mdc-touch-target-wrapper">
+        <button class="mdc-button mdc-button--touch">
+          <span class="mdc-button__ripple"></span>
+          <span class="mdc-button__touch"></span>
+          <span class="mdc-button__label">My Accessible Button</span>
+        </button>
+      </div>
+      <ul class="mdc-image-list my-image-list">
+        <li class="mdc-image-list__item">
+          <div class="mdc-image-list__image-aspect-container">
+            <img class="mdc-image-list__image" src="images/img1.jpg">
+          </div>
+          <div class="mdc-image-list__supporting">
+            <span class="mdc-image-list__label">img1</span>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <div class="mdc-image-list__image-aspect-container">
+            <img class="mdc-image-list__image" src="/images/img2.jfif">
+          </div>
+          <div class="mdc-image-list__supporting">
+            <span class="mdc-image-list__label">img2</span>
+          </div>
+        </li>
+        <li class="mdc-image-list__item">
+          <div class="mdc-image-list__image-aspect-container">
+            <img class="mdc-image-list__image" src="/images/img3.jfif">
+          </div>
+          <div class="mdc-image-list__supporting">
+            <span class="mdc-image-list__label">img3</span>
+          </div>
+        </li>
+      </ul>
+
+<div class="mdc-slider">
+  <input class="mdc-slider__input" type="range" min="0" max="100" value="50" name="volume" aria-label="Continuous slider demo">
+  <div class="mdc-slider__track">
+    <div class="mdc-slider__track--inactive"></div>
+    <div class="mdc-slider__track--active">
+      <div class="mdc-slider__track--active_fill"></div>
+    </div>
+  </div>
+  <div class="mdc-slider__thumb">
+    <div class="mdc-slider__thumb-knob"></div>
+  </div>
+</div>
+
+<div class="mdc-slider mdc-slider--range">
+  <input class="mdc-slider__input" type="range" min="0" max="70" value="30" name="rangeStart" aria-label="Continuous range slider demo">
+  <input class="mdc-slider__input" type="range" min="30" max="100" value="70" name="rangeEnd" aria-label="Continuous range slider demo">
+  <div class="mdc-slider__track">
+    <div class="mdc-slider__track--inactive"></div>
+    <div class="mdc-slider__track--active">
+      <div class="mdc-slider__track--active_fill"></div>
+    </div>
+  </div>
+  <div class="mdc-slider__thumb">
+    <div class="mdc-slider__thumb-knob"></div>
+  </div>
+  <div class="mdc-slider__thumb">
+    <div class="mdc-slider__thumb-knob"></div>
+  </div>
+</div>
+      <script>
+        import {MDCList} from "@material/list";
+const list = MDCList.attachTo(document.querySelector('.mdc-list'));
+list.wrapFocus = true;
+import {MDCDrawer} from "@material/drawer";
+const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+        import {MDCTopAppBar} from '@material/top-app-bar';
+
+// Instantiation
+const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+const topAppBar = new MDCTopAppBar(topAppBarElement);
+
+const listEl = document.querySelector('.mdc-drawer .mdc-list');
+const mainContentEl = document.querySelector('.main-content');
+
+listEl.addEventListener('click', (event) => {
+  drawer.open = false;
+});
+
+document.body.addEventListener('MDCDrawer:closed', () => {
+  mainContentEl.querySelector('input, button').focus();
+});
+      </script>
+</body>
+</html>
