@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Feedback</title>
+    </head>
+    <body>
+        <h1>My Feedback form</h1>
+        <form enctype="multipart/form-data" action="submit.py" method="post" >
+            <div class="container">
+                <ul>
+                <li>Name: <input type="text" name="name"></li>
+                <br>
+                <li>E-mail: <input type="text" name="email"></li>
+                <br>
+                <li>Password: <input type="password" name="password"></li>
+                <br>
+                <ul>
+                <p>Please check all the emotions that apply to you:</p>
+                        <li>Angry <input type="checkbox" name="emotions" value="Angry"></li>
+                        <li>Sad <input type="checkbox" name="emotions" value="Sad"></li>
+                        <li>Happy <input type="checkbox" name="emotions" value="Happy"></li>
+                        <li>Ambivalent <input type="checkbox" name="emotions" value="Ambivalent"></li>
+                </ul>
+                <ul>
+                    <p>How satisfied are you with our service?</p>
+                        <li>Very Satisfied <input type="radio" name="satisfied" value="Very Satisfied"></li>
+                        <li>Satisfied <input type="radio" name="satisfied" value="Satisfied"></li>
+                        <li>Did'nt care <input type="radio" name="satisfied" value="Neutral"></li>
+                        <li>Dissatisfied <input type="radio" name="satisfied" value="Dissatisfied"></li>
+                        <li>Very Dissatisfied <input type="radio" name="satisfied" value="Very Dissatisfied"></li>
+                </ul>
+
+                    <li>Further Comments: <input type="textarea" name="comment"></li>
+                <li>Bio Photo:<input type="file" name="bio-photo"></li>
+                <li>Location visited :<select name="Location">
+                    <option value="">Select a location</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Other">Other</option>
+                </select>
+                </li>
+            </ul>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
